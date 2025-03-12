@@ -175,6 +175,42 @@ switch (day) {
 }
 ```
 
+
+
+#### Super Fancy Example:
+```javascript
+switch (lcCountryCode) {
+    case 'AU':
+        lcCurrencySymbol = '$';
+        break;
+    case 'CA':
+        lcCurrencySymbol = '$';
+        break;
+    case 'FR':
+        lcCurrencySymbol = '€';
+        break;
+    case 'DE':
+        lcCurrencySymbol = '€';
+        break;
+    case 'IT':
+        lcCurrencySymbol = '€';
+        break;
+    case 'JP':
+        lcCurrencySymbol = '¥';
+        break;
+    case 'NZ':
+        lcCurrencySymbol = '$';
+        break;
+    case 'GB':
+        lcCurrencySymbol = '£';
+        break;
+    case 'US':
+        lcCurrencySymbol = '$';
+        break;
+}
+```
+
+
 ---
 ## 📌 Loops
 
