@@ -23,6 +23,31 @@ if (age >= 18) {
 }
 ```
 
+
+#### Super Fancy Example:
+```javascript
+if (laAddRow === true) {
+    Table.row.add([
+        msg.data[i][0],
+        msg.data[i][1],
+        msg.data[i][2],
+        msg.data[i][3],
+        msg.data[i][4],
+        msg.data[i][5],
+        msg.data[i][6],
+        msg.data[i][7],
+        msg.data[i][8],
+        msg.data[i][9],
+        msg.data[i][10],
+        msg.data[i]['url'],
+        msg.data[i][12],
+        msg.data[i]['processed'],
+        msg.data[i]['extraName']
+    ]);
+}
+```
+
+
 ---
 
 ### 2. The `else` Statement
@@ -47,6 +72,42 @@ if (temperature > 25) {
     console.log("It's a cool day.");
 }
 ```
+
+
+
+#### Super Fancy Example:
+```javascript
+laAddRow = true;
+if ($('#Modal_Checkbox_Include_OutofStock').is(':checked')) {
+
+    laAddRow = true;
+} else {
+    if (msg.data[i][9] === 'Out of Stock' || msg.data[i][9] === 'Discontinued') {
+
+        laAddRow = false;
+    }
+}
+if (laAddRow === true) {
+    Table.row.add([
+        msg.data[i][0],
+        msg.data[i][1],
+        msg.data[i][2],
+        msg.data[i][3],
+        msg.data[i][4],
+        msg.data[i][5],
+        msg.data[i][6],
+        msg.data[i][7],
+        msg.data[i][8],
+        msg.data[i][9],
+        msg.data[i][10],
+        msg.data[i]['url'],
+        msg.data[i][12],
+        msg.data[i]['processed'],
+        msg.data[i]['extraName']
+    ]);
+}
+```
+
 
 ---
 
