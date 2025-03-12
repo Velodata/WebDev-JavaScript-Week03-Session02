@@ -8,17 +8,20 @@
 </head>
 <body>
     <script>
-        let fruit = "apple";
+        let fruit = "Apple";
 
         switch (fruit) {
             case "banana":
                 console.log("This is a banana.");
+                document.body.innerHTML += `<p>Your fruit is a banana!</p>`;
                 break;
             case "apple":
                 console.log("This is an apple.");
+                document.body.innerHTML += `<p>Your fruit is an apple!</p>`;
                 break;
             default:
-                console.log("Unknown fruit.");
+                console.log("You have an Unknown fruit.");
+                document.body.innerHTML += `<p>You have an Unknown fruit.</p>`;
         }
 
         // BONUS CHALLENGE:
