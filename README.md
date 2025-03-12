@@ -1,8 +1,6 @@
-# WebDev-JavaScript-Week03-Session02
-In this lesson we'll be learning about conditional statements and do-while-for-loops.  Happy coding dear students!
+# WebDev-JavaScript-Week03-Session02  -  JavaScript Control Structures
+In this lesson we'll be learning about conditional statements and "while loops".  Happy coding dear students!
 
-
-# JavaScript Control Structures
 
 ## Conditional Statements
 
@@ -117,8 +115,7 @@ switch (day) {
 ```
 
 ---
-
-## Loops
+## 📌 Loops
 
 ### 5. The `while` Loop
 The `while` loop executes a block of code as long as a specified condition is `true`.
