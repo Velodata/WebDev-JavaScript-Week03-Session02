@@ -1,0 +1,33 @@
+<!-- 
+// Lesson 2: Fix the Loggic Error - Else If Statements
+// index.html 
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lesson 2 - Else If</title>
+</head>
+<body>
+    <script>
+        let score = 85;
+        let message = '';
+        if (score >= 90) {
+            console.log("Grade: A");
+            message = "Grade: A";
+        } else if (score >= 70) {
+            console.log("Grade: C");
+            message = "Grade: C";
+        } else if (score >= 80) {
+            console.log("Grade: B");
+            message = "Grade: B";
+        } else {
+            console.log("Grade: F");
+        }
+
+        document.body.innerHTML += `<p>Your score was ${score}</p>`;
+        document.body.innerHTML += `<p>Your grade was ${message}</p>`;
+        // BONUS CHALLENGE: 
+        // Convert this logic into a function called getGrade(score) that returns the grade as a string.
+    </script>
+</body>
+</html>
