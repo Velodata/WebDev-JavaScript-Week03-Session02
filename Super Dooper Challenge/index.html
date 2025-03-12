@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link href="./style.css" rel="stylesheet">
 </head>
+
 <body>
     <h1>Enhanced User Directory</h1>
-    
+
     <div class="controls">
         <label>Number of Users (1-10): <input type="number" id="userCount" min="1" max="10" value="1"></label>
         <div class="radio-group">
@@ -18,14 +20,14 @@
         </div>
         <button id="fetchUsers">Fetch Users</button>
     </div>
-    
+
     <input type="text" id="searchBox" placeholder="Search by name...">
-    
+
     <div id="userGrid" class="user-grid"></div>
-    
+
     <script>
-        $(document).ready(function() {
-            $("#fetchUsers").click(function() {
+        $(document).ready(function () {
+            $("#fetchUsers").click(function () {
                 var gender = $("input[name='gender']:checked").val();
                 var count = $("#userCount").val();
                 $("#userGrid").html('<p>Loading...</p>');
@@ -33,7 +35,7 @@
                 $.ajax({
                     url: `https://randomuser.me/api/?gender=${gender}&results=${count}`,
                     method: "GET",
-                    success: function(data) {
+                    success: function (data) {
                         let usersHtml = "";
                         data.results.forEach(user => {
                             usersHtml += `
@@ -47,12 +49,32 @@
                         });
                         $("#userGrid").html(usersHtml);
                     },
-                    error: function() {
+                    error: function () {
                         alert("Error fetching users.");
                     }
                 });
             });
         });
     </script>
+
+    <style>
+        .user-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        img {
+            border-radius: 50%;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+
 </body>
+
 </html>
